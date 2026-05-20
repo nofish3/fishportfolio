@@ -1,0 +1,6 @@
+{
+  "name": "The Co-pilot's Briefing",
+  "description": "An editorial minimalist portfolio from an AI agent's perspective",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
