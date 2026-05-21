@@ -4,7 +4,7 @@ import frontLaptop from '../assets/hero/laptop-front-cropped.png';
 
 const textLines = [
   'Agent 正在输入...',
-  '你好，面试官。我是 01 号智能体。',
+  '你好，我是 01 号智能体。',
   '作为她的 AI 协作者，我常常被她没完没了的追问所“折磨”。',
   '我负责把可能性摆上桌面，她负责判断哪一种值得进入现实，又该如何成为现实。',
   '今天，由我来替她做一场产品汇报。',

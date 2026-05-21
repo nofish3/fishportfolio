@@ -2,33 +2,32 @@ import { motion } from 'motion/react';
 
 export default function InitialScan() {
   return (
-    <section id="initial-scan" className="px-8 md:px-24 max-w-7xl mx-auto pt-0 pb-24">
+    <section id="initial-scan" className="px-8 md:px-24 max-w-7xl mx-auto pt-0 pb-14">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-100px' }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
       >
-        <div className="flex items-center gap-4 mb-16">
-          <div className="w-2 h-2 bg-ink" />
-          <h2 className="font-mono text-sm tracking-widest uppercase">
-            Initial Scan / 候选人初步扫描
-          </h2>
-        </div>
-
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-8">
-          <div className="lg:col-span-4 font-mono text-sm leading-relaxed">
+          <div className="lg:col-span-4 font-mono text-sm leading-relaxed lg:pt-1">
+            <h2 className="text-sm font-mono tracking-widest text-ink/40 uppercase mb-5">
+              INITIAL SCAN
+            </h2>
             <div className="flex flex-col gap-6">
+              <InfoItem label="NAME" value="吴俞宏" />
+              <InfoItem label="TIME" value="2023.09-2027.06" />
               <InfoItem label="BACKGROUND" value="广东工业大学 · 计算机科学与技术" />
               <InfoItem label="DIRECTION" value="AI产品 / 产品经理实习生" />
-              <InfoItem label="EXPERIENCE" value="2段AI产品实习" />
-              <InfoItem label="CORE ABILITY" value="AI应用设计 / Workflow编排 / Prompt设计 / 数据评估" />
-              <InfoItem label="TOOLS" value="Axure / Dify / Claude Code / Codex / SQL / Python" />
-              <InfoItem label="STYLE" value="会用 AI 做 Demo，也会把 Demo 拆成产品方案" />
+              <InfoItem
+                label="PERSONAL ADVANTAGE"
+                value="两段AI产品实习 / AI产品落地经验 / AI Coding独立开发应用 / Workflow编排 / CET6"
+              />
+              <InfoItem label="TOOLS" value="Axure / Dify / Claude Code / Codex / SQL" />
             </div>
           </div>
 
-          <div className="lg:col-span-8 flex flex-col gap-8">
+          <div className="lg:col-span-8 flex flex-col gap-6">
             <ScanCard
               num="01"
               title="AI数学作业批改与错题本"
@@ -42,7 +41,7 @@ export default function InitialScan() {
             <ScanCard
               num="03"
               title="AI测评助手"
-              desc="她围绕初级 PM 在 AI 评测中“评什么、怎么评、如何归因”的困惑，设计了一个轻量化测评工作台。重点不是让 AI 直接给出结论，而是帮助产品经理更快完成判断、归因和迭代。"
+              desc="她围绕初级 PM 在 AI 评测中“评什么、怎么评、如何归因”的困惑，设计了一个轻量化测评助手。重点不是让 AI 直接替人下结论，而是帮助产品经理把评测流程前置到 MVP 阶段，让功能上线后能被验证、被衡量、被持续迭代。"
             />
           </div>
         </div>
@@ -62,14 +61,14 @@ function InfoItem({ label, value }: { label: string; value: string }) {
 
 function ScanCard({ num, title, desc }: { num: string; title: string; desc: string }) {
   return (
-    <div className="group relative p-8 border border-ink bg-cold-white transition-colors duration-500 hover:border-klein cursor-default">
-      <div className="flex flex-col md:flex-row gap-6 md:gap-12 items-start">
-        <div className="font-mono text-2xl md:text-3xl font-light text-ink/30 transition-colors duration-500 group-hover:text-klein">
+    <div className="group relative p-6 border border-ink bg-cold-white transition-colors duration-500 hover:border-klein cursor-default">
+      <div className="flex flex-col md:flex-row gap-5 md:gap-10 items-start">
+        <div className="font-mono text-xl md:text-2xl font-light text-ink/30 transition-colors duration-500 group-hover:text-klein">
           {num}
         </div>
         <div>
-          <h3 className="text-xl font-bold mb-4">{title}</h3>
-          <p className="text-ink/70 leading-relaxed font-serif text-lg">{desc}</p>
+          <h3 className="text-lg font-bold mb-3">{title}</h3>
+          <p className="text-ink/70 leading-relaxed font-serif text-base">{desc}</p>
         </div>
       </div>
     </div>
