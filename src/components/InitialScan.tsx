@@ -16,7 +16,7 @@ export default function InitialScan() {
             </h2>
             <div className="flex flex-col gap-6">
               <InfoItem label="NAME" value="吴俞宏" />
-              <InfoItem label="TIME" value="2023.09-2027.06" />
+              <InfoItem label="EMAIL" value="wwuyuhong@outlook.com" />
               <InfoItem label="BACKGROUND" value="广东工业大学 · 计算机科学与技术" />
               <InfoItem label="DIRECTION" value="AI产品 / 产品经理实习生" />
               <InfoItem
