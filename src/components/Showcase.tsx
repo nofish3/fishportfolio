@@ -1,6 +1,6 @@
 import { motion } from 'motion/react';
 import { Fragment, useEffect, useRef, useState } from 'react';
-import { MoveRight } from 'lucide-react';
+import { Github, MoveRight } from 'lucide-react';
 
 export default function Showcase() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -977,6 +977,34 @@ function ProjectC_Card3() {
             </motion.p>
           </div>
         ))}
+      </div>
+
+      <motion.figure
+        initial={{ opacity: 0, y: 12 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, margin: "-80px" }}
+        transition={{ duration: 0.4 }}
+        className="mt-6 md:mt-8 border border-ink/15 bg-white/90 overflow-hidden"
+      >
+        <img
+          src="/evalpilot/collage.jpg"
+          alt="EvalPilot workflow collage"
+          className="w-full h-auto object-contain"
+          loading="lazy"
+        />
+      </motion.figure>
+
+      <div className="mt-4 md:mt-5 text-ink/80">
+        <a
+          href="https://github.com/nofish3/EvalPilot"
+          target="_blank"
+          rel="noreferrer"
+          className="inline-flex items-center gap-2 text-[#2E88FF] hover:text-klein transition-colors font-mono text-sm md:text-[15px]"
+        >
+          <span className="font-serif italic text-ink/80 tracking-[0.02em]">GitHub仓库链接：</span>
+          <Github className="w-4 h-4" />
+          <span>https://github.com/nofish3/EvalPilot</span>
+        </a>
       </div>
       
       <div className="border-t border-ink/10 pt-6 mt-12">
